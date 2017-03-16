@@ -1,0 +1,31 @@
+﻿@model  LoginRequest
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form method="post" action="/Login">
+    <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+    <input type="hidden" name="rememberMe" value="true"/>
+    @Html.ValidationSummary()
+    <table>
+        <tr>
+            <td>用户名</td>
+            <td>
+                @Html.TextBoxFor(m=>m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td>
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="登录" />
+            </td>
+        </tr>
+    </table>
+</form>

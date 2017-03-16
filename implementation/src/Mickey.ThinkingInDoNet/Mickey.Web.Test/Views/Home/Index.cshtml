@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<table>
+    <tr>
+        <td>当前用户:</td>
+        <td>@User.UserName</td>
+    </tr>
+</table>
+
+<form action="/logout" method="post">
+    <input type="submit"  value="登出"/>
+</form>
+
+<form action="/job" method="get">
+    <input type="submit" value="职位列表" />
+</form>

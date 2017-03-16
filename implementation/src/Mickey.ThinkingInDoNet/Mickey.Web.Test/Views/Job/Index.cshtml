@@ -1,0 +1,15 @@
+﻿@model IEnumerable<JobViewModel>
+
+<table>
+    @foreach (var job in Model)
+    {
+        <tr>
+            <td>@job.Name</td>
+            <td>@job.Description</td>
+        </tr>
+    }
+</table>
+
+<form action="/" method="get">
+    <input type="submit" value="返回" />
+</form>

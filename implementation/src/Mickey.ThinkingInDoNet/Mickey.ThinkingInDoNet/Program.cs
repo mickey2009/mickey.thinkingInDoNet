@@ -14,13 +14,11 @@ namespace Mickey.ThinkingInDoNet
             var path = @"F:\git\mickey.thinkingInDoNet\implementation\src\Mickey.ThinkingInDoNet\Mickey.ThinkingInDoNet\test.txt";
             var test = File.ReadAllText(path);
 
-            using (StreamWriter sw = new StreamWriter(path))
+            for (int i = 0; i < 5; i++)
             {
-                sw.Write(test.Replace("1", "55"));
-                sw.Flush();
+                File.AppendAllText(path, "\n222222");
             }
             Console.Write(File.ReadAllText(path));
-
             Console.ReadLine();
         }
     }

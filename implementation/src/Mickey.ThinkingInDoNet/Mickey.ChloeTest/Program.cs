@@ -12,8 +12,7 @@ namespace Mickey.ChloeTest
     {
         static void Main(string[] args)
         {
-            IDbContext context = new MySqlContext("");
-            IQuery<User> q = context.Query<User>();
+
         }
     }
 }

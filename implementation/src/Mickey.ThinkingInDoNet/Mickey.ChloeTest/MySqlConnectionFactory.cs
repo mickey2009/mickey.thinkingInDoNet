@@ -19,8 +19,9 @@ namespace Mickey.ChloeTest
         }
         public IDbConnection CreateConnection()
         {
-            SqlConnection conn = new MySqlConnection(this._connString);
-            return conn;
+            //SqlConnection conn = new MySqlConnection(this._connString);
+            //return conn;
+            return null;
         }
     }
 }

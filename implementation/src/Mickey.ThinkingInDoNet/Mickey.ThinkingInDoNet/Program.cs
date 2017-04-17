@@ -18,6 +18,8 @@ namespace Mickey.ThinkingInDoNet
             {
                 File.AppendAllText(path, "\n222222");
             }
+
+
             Console.Write(File.ReadAllText(path));
             Console.ReadLine();
         }

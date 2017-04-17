@@ -9,7 +9,7 @@ namespace Mickey.JieBa
         {
             var segmenter = new JiebaSegmenter();
             segmenter.LoadUserDict(@"..\..\Resources\userdict.txt");
-            var tags = segmenter.Cut("我是产品经理， 会画产品原型", false, false);
+            var tags = segmenter.Cut("我是产品经理，    会画产品原型", false, false);
             foreach (var tag in tags)
             {
                 Console.WriteLine(tag);
